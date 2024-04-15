@@ -1,9 +1,49 @@
-# CNN_flower_recognition
-Used Convolutional neural network for recognising different types of flowers
+# Flower Classification with Deep Learning
+
+This project demonstrates how to build a deep learning model for classifying images of flowers into five categories: Daisy, Sunflower, Tulip, Dandelion, and Rose. The model is built using a Convolutional Neural Network (CNN) and is trained on a dataset of flower images. The project includes data preprocessing, model training, and evaluation steps.
+The model is trained for 50 epochs with a batch size of 128.
 
 Dataset: https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
 
- cross-entropy loss function. The model is trained for 50 epochs with a batch size of 128.
+
+
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Data Preparation](#data-preparation)
+- [Model Architecture](#model-architecture)
+- [Training the Model](#training-the-model)
+- [Evaluating the Model](#evaluating-the-model)
+- [Visualizing Results](#visualizing-results)
+- [Conclusion](#conclusion)
+
+## Requirements
+
+This project requires Python 3.6 or higher and the following libraries:
+
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- OpenCV (cv2)
+- TensorFlow
+- Keras
+- Scikit-learn
+- PIL
+
+You can install these libraries using pip:
+
+```bash
+pip install numpy pandas matplotlib seaborn opencv-python tensorflow keras scikit-learn pillow
+```
+
+## Data Preparation
+
+The dataset consists of images of flowers, each categorized into one of the five classes. The images are stored in separate directories for each flower type. The `make_train_data` function reads the images from these directories, resizes them to a standard size (150x150 pixels), and appends them to a list along with their corresponding labels.
+
+## Model Architecture
+
+The model architecture consists of a series of convolutional layers, each followed by a max pooling layer, and then a fully connected layer at the end. The model uses the Adam optimizer with a learning rate of 0.001 and the categorical cross-entropy loss function. The model is trained for 50 epochs with a batch size of 128.
 
 ## Training the Model
 
